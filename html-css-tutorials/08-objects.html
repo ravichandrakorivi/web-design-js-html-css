@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      /*
+      const product = {
+        name: 'socks',
+        price: 1090
+      };
+      console.log(typeof  product);
+      console.log(product);
+      console.log(product.name);
+      console.log(product.price);
+
+      product.name = 'cotton socks';
+      console.log(product);
+
+      product.newProperty = true;
+      console.log(product);
+
+      delete product.newProperty;
+      console.log(product);
+      */
+
+      /*
+      const product2 = {
+        name: 'shirt',
+        'delivery-time': '1 day',
+        ['gender-type']: 'men',
+        rating: {
+          stars: 4.5,
+          count: 87
+        },
+        fun: function function1() {
+          console.log('function inside object');
+        }
+      };
+      console.log(product2);
+      console.log(product2.name);
+      console.log(product2['name']);
+      console.log(product2['delivery-time']);
+      
+      console.log(product2.rating.count);
+      product2.fun();
+
+      console.log(typeof console); // object
+      console.log(typeof console.log); // function 
+
+      console.log(JSON.stringify(product2));
+      // JSON objects does n't support functions properties like JavaScript Objects
+      // JavaScript Object only makes sense in JavaScript language. 
+      // Where JSON format can be understood by any programming language.
+
+      const jsonString = JSON.stringify(product2);
+      console.log(JSON.parse(jsonString));
+      */
+
+      // Auto-boxing
+      console.log('hello'.length);
+      console.log('hello'.toUpperCase());
+
+      const object1 = {
+        message: 'hello',
+        price: 799
+      };
+      const object2 = object1; // Copy by Reference
+
+      // Const object reference can not be changed. But their individual attribute values can be changed.
+      object1.message = 'Good job!';
+      console.log(object1);
+      console.log(object2);
+
+      const object3 = {
+        message: 'Good job!',
+        price: 799
+      };
+      console.log(object1 === object3); // Compares the references of the objects but not their values. Hence, returns false
+      console.log(object1 === object2) // Returns true
+
+      // const message = object1.message;
+      const { message, price: cost } = object1;
+      console.log(message);
+      console.log(cost);
+
+      const object4 = {
+        // message: message,
+        message,
+        // method: function function1() {
+
+        // },
+        // method: function() {
+
+        // },
+        method() {
+
+        }
+      };
+    </script>
+  </body>
+</html>
